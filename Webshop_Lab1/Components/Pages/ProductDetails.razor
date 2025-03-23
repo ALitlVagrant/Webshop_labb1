@@ -1,0 +1,79 @@
+﻿@page "/productdetails/{id:int}"
+@inject WebshopApi webshopApi
+@inject ILocalStorageService localStorage
+@rendermode InteractiveServer
+
+<h3>📦 Produktdetaljer</h3>
+
+@if (product != null)
+{
+    <div>
+        <h4>@product.Name</h4>
+        <p>@product.Description</p>
+        <p><strong>Pris:</strong> @product.Price kr</p>
+        <img src="@product.ImageUrl" alt="@product.Name" width="200" />
+
+        <br /><br />
+        <button @onclick="AddToCart">🛒 Lägg till i varukorg</button>
+        @foreach (var message in confirmationMessages)
+        {
+            <p class="text-success">@message</p>
+        }
+        
+        
+    </div>
+
+    <br />
+    <a href="/products">← Tillbaka till produkter</a>
+}
+else
+{
+    <p>⏳ Laddar produktdetaljer...</p>
+}
+
+@code {
+    [Parameter] public int id { get; set; }
+    private Product product;
+
+    private List<string> confirmationMessages = new List<string>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Console.WriteLine($"Hämtar produkt med ID {id}...");
+        product = await webshopApi.GetProductByIdAsync(id);
+    }
+
+    private async Task AddToCart()
+    {
+        if (product == null)
+        {
+            Console.WriteLine("ERROR: Ingen produkt att lägga till i varukorgen!");
+            return;
+        }
+
+        Console.WriteLine($"Försöker lägga till {product.Name} i varukorgen...");
+    
+        var cartItems = await localStorage.GetItemAsync<List<Product>>("cart");
+
+        if (cartItems == null)
+        {
+            Console.WriteLine("Ingen befintlig varukorg hittades. Skapar ny lista...");
+            cartItems = new List<Product>();
+        }
+
+        cartItems.Add(product);
+        await localStorage.SetItemAsync("cart", cartItems);
+    
+        Console.WriteLine("Produkt tillagd i varukorgen!");
+
+        // Lägg till meddelande
+        string confirmationMessage = $"{product.Name} har lagts till i varukorgen!";
+        confirmationMessages.Add(confirmationMessage);
+
+        // Vänta 2 sekunder innan det specifika meddelandet försvinner
+        await Task.Delay(2000);
+        confirmationMessages.Remove(confirmationMessage);
+    }
+
+
+}

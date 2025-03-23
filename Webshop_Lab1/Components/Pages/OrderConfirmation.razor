@@ -1,0 +1,51 @@
+﻿@page "/orderconfirmation"
+@inject ILocalStorageService localStorage
+@rendermode InteractiveServer
+
+<h3>Bekräftelse på din beställning</h3>
+
+@if (!isLoading)
+{
+    @if (order != null && orderItems != null)
+    {
+        <p><strong>Namn:</strong> @order.Name</p>
+        <p><strong>Adress:</strong> @order.Address, @order.City, @order.ZipCode</p>
+
+        <h4>Produkter:</h4>
+        <ul>
+            @foreach (var item in orderItems)
+            {
+                <li>@item.Name - @item.Price kr</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>Ingen orderinformation hittades.</p>
+    }
+}
+else
+{
+    <p>Laddar orderinformation...</p>
+}
+
+@code {
+    private Cart.Order order;
+    private List<Product> orderItems;
+    private bool isLoading = true;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            order = await localStorage.GetItemAsync<Cart.Order>("orderDetails");
+            orderItems = await localStorage.GetItemAsync<List<Product>>("orderItems");
+
+            // Töm varukorgen efter att ordern hämtats
+            await localStorage.RemoveItemAsync("orderItems");
+
+            isLoading = false;
+            StateHasChanged(); // Tvinga en omrendering
+        }
+    }
+}

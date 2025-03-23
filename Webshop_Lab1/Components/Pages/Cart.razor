@@ -1,0 +1,81 @@
+﻿@page "/cart"
+@inject NavigationManager Navigation
+@inject ILocalStorageService LocalStorage
+@rendermode InteractiveServer
+
+<h3>Varukorg</h3>
+
+@if (cartItems.Any())
+{
+    <ul>
+        @foreach (var item in cartItems)
+        {
+            <li>@item.Name - @item.Price kr <button @onclick="() => RemoveFromCart(item)">❌</button></li>
+        }
+    </ul>
+
+    <h4>Fyll i leveransuppgifter</h4>
+    <EditForm Model="order" OnValidSubmit="SubmitOrder">
+        <DataAnnotationsValidator />
+        <div>
+            <label>Namn:</label>
+            <InputText @bind-Value="order.Name" required />
+        </div>
+        <div>
+            <label>Adress:</label>
+            <InputText @bind-Value="order.Address" required />
+        </div>
+        <div>
+            <label>Stad:</label>
+            <InputText @bind-Value="order.City" required />
+        </div>
+        <div>
+            <label>Postnummer:</label>
+            <InputText @bind-Value="order.ZipCode" required />
+        </div>
+        <button type="submit">Bekräfta beställning</button>
+    </EditForm>
+}
+else
+{
+    <p>Varukorgen är tom.</p>
+}
+
+@code {
+    private List<Product> cartItems = new();
+    private Order order = new();
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Hämta varukorgsprodukter från localStorage när komponenten har renderats
+            cartItems = await LocalStorage.GetItemAsync<List<Product>>("cart") ?? new List<Product>();
+            StateHasChanged(); // Uppdatera sidan för att visa produkterna
+        }
+    }
+
+    private async Task SubmitOrder()
+    {
+        await LocalStorage.SetItemAsync("orderDetails", order);
+        await LocalStorage.SetItemAsync("orderItems", cartItems);
+        await LocalStorage.RemoveItemAsync("cart");
+        Navigation.NavigateTo("/orderconfirmation");
+    }
+
+    private async Task RemoveFromCart(Product product)
+    {
+        cartItems.Remove(product);
+        await LocalStorage.SetItemAsync("cart", cartItems);
+    }
+}
+
+@code {
+    public class Order
+    {
+        public string Name { get; set; } = "";
+        public string Address { get; set; } = "";
+        public string City { get; set; } = "";
+        public string ZipCode { get; set; } = "";
+    }
+}

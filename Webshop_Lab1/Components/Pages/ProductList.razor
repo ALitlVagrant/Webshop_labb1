@@ -1,0 +1,32 @@
+﻿@page "/products"
+
+@inject WebshopApi webshopApi
+
+<h3>Products</h3>
+
+@if (products != null && products.Count > 0)
+{
+    <ul>
+        @foreach (var product in products)
+        {
+            <li>
+                <a href="/productdetails/@product.Id">@product.Name</a>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Loading products...</p>
+}
+
+@code {
+    private List<Product> products;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Console.WriteLine("Fetching products...");
+        products = await webshopApi.GetProductsAsync();
+        Console.WriteLine("Finished fetching products.");
+    }
+}

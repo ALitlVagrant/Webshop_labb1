@@ -1,0 +1,10 @@
+﻿@code {
+    [Parameter] public Product Product { get; set; }
+}
+
+<div>
+    <h4>@Product.Name</h4>
+    <p>@Product.Description</p>
+    <p>Pris: @Product.Price</p>
+    <img src="@Product.ImageUrl" alt="@Product.Name" />
+</div>

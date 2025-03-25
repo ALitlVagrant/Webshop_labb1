@@ -3,6 +3,11 @@
 @inject ILocalStorageService localStorage
 @rendermode InteractiveServer
 
+
+<head>
+    <link rel="stylesheet" href="css/ProductDetails.css" />
+</head>
+
 <h3>📦 Produktdetaljer</h3>
 
 @if (product != null)
@@ -24,12 +29,13 @@
     </div>
 
     <br />
-    <a href="/products">← Tillbaka till produkter</a>
+    <a href="/">← Tillbaka till produkter</a>
 }
 else
 {
     <p>⏳ Laddar produktdetaljer...</p>
 }
+
 
 @code {
     [Parameter] public int id { get; set; }

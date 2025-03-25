@@ -218,3 +218,4 @@ C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_api\obj\Debug\net9.0\Webshop_a
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_api\obj\Debug\net9.0\ref\Webshop_api.dll
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_api\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_api\obj\Debug\net9.0\Webshop_api.sourcelink.json

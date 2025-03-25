@@ -1,0 +1,87 @@
+/* wwwroot/css/ProductList.css */
+
+.product-list-container[b-badw4r8kv4] {
+    background-color: #f4f4f4; /* Ljus bakgrund för listan */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: 30px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-list-container h3[b-badw4r8kv4] {
+    font-size: 2rem;
+    color: #b30000; /* Mörkröd textfärg för rubriken */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-list-container ul[b-badw4r8kv4] {
+    display: flex; /* Använder Flexbox för att ordna produkterna horisontellt */
+    flex-wrap: wrap; /* Gör att produkterna kan gå till nästa rad vid behov */
+    gap: 20px; /* Lägger till mellanrum mellan produkterna */
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-list-container li[b-badw4r8kv4] {
+    flex: 1 0 200px; /* Varje produkt tar upp ett minimum av 200px men kan växa om det finns plats */
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Gör så att varje produktnamn visas under bilden */
+    align-items: center; /* Centrerar bilden och namnet */
+    text-align: center; /* Centrerar texten */
+}
+
+.product-list-container li img[b-badw4r8kv4] {
+    width: 150px; /* Fasta dimensioner för bilder */
+    height: auto; /* Låt höjden anpassas proportionellt */
+    object-fit: cover; /* Gör att bilden täcker området utan att förvrängas */
+    border-radius: 8px; /* Ger rundade hörn för bilderna */
+    margin-bottom: 10px; /* Lägger till utrymme mellan bild och produktnamn */
+}
+
+.product-list-container li a[b-badw4r8kv4] {
+    color: #b30000; /* Mörkröd färg på länkar */
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.product-list-container li a:hover[b-badw4r8kv4] {
+    color: #fff;
+    background-color: #b30000; /* Röd bakgrund på hover */
+}
+
+/* Responsivitet för små skärmar */
+@media (max-width: 768px) {
+    .product-list-container[b-badw4r8kv4] {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .product-list-container h3[b-badw4r8kv4] {
+        font-size: 1.8rem;
+    }
+
+    .product-list-container li[b-badw4r8kv4] {
+        padding: 15px;
+    }
+
+    .product-list-container li a[b-badw4r8kv4] {
+        font-size: 1rem;
+    }
+
+    li img[b-badw4r8kv4] {
+        width: 100px; /* Justerat för mindre bilder på små skärmar */
+        height: auto; /* Behåller proportionerna för bilderna */
+        object-fit: cover; /* Gör att bilden täcker området utan att förvrängas */
+        border-radius: 8px; /* Lägger till rundade hörn för bilderna */
+        margin-right: 10px; /* Ger lite avstånd mellan bild och produktnamn */
+    }
+}

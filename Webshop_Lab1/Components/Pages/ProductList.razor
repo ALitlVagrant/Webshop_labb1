@@ -1,19 +1,28 @@
-﻿@page "/products"
+﻿@page "/"
 
 @inject WebshopApi webshopApi
 
-<h3>Products</h3>
 
 @if (products != null && products.Count > 0)
 {
-    <ul>
-        @foreach (var product in products)
-        {
-            <li>
-                <a href="/productdetails/@product.Id">@product.Name</a>
-            </li>
-        }
-    </ul>
+    <div class="product-list-container">
+        <h3>Våra Produkter</h3>
+        <ul>
+            @foreach (var product in products)
+            {
+                <li>
+                    <a href="/productdetails/@product.Id">
+                        <img src="@product.ImageUrl" alt="@product.Name" />
+                        <br />
+                        @product.Name
+                        <br />
+                        <strong>@product.Price kr</strong> 
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+
 }
 else
 {

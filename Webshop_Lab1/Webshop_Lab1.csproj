@@ -10,4 +10,11 @@
       <PackageReference Include="Blazored.LocalStorage" Version="4.5.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\css\Cart.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\OrderConfirmation.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\ProductDetails.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\ProductList.css" />
+    </ItemGroup>
+
 </Project>

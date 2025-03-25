@@ -1,0 +1,121 @@
+﻿/* wwwroot/css/Cart.css */
+
+/* Container för hela varukorgen */
+.cart-container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Rubrik för varukorgen */
+.cart-container h3 {
+    font-size: 2rem;
+    color: #b30000; /* Mörkröd färg */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Lista över varukorgsartiklar */
+.cart-items ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-items li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-items li button {
+    background-color: #b30000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-items li button:hover {
+    background-color: #7a0000; /* Mörkare röd när man hovrar */
+}
+
+/* Formulär för leveransuppgifter */
+.delivery-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.delivery-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.delivery-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.delivery-form button {
+    background-color: #b30000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delivery-form button:hover {
+    background-color: #7a0000; /* Mörkare röd när man hovrar */
+}
+
+/* Text för tom varukorg */
+.cart-empty-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #b30000;
+    font-weight: bold;
+}
+
+/* Responsivitet för små skärmar */
+@media (max-width: 768px) {
+    .cart-container {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .cart-items li {
+        padding: 12px;
+    }
+
+    .cart-items li button {
+        padding: 5px 8px;
+    }
+
+    .delivery-form input {
+        font-size: 0.9rem;
+    }
+
+    .delivery-form button {
+        font-size: 1rem;
+    }
+}

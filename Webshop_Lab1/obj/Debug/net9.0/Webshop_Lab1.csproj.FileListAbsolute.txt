@@ -13,10 +13,8 @@ C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\bin\Debug\net9.0\Webshop_
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\bin\Debug\net9.0\Webshop_Lab1.dll
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\bin\Debug\net9.0\Webshop_Lab1.pdb
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
-C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\scopedcss\bundle\Webshop_Lab1.styles.css
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\scopedcss\projectbundle\Webshop_Lab1.bundle.scp.css
-C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\compressed\g3enj6qihq-khy4lop6wu.gz
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\compressed\hm0iv85whv-t1cqhe9u97.gz
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\compressed\6hjemlv9i6-c2jlpeoesf.gz
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\compressed\537cqjewui-sejl45xvog.gz
@@ -61,8 +59,6 @@ C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\compress
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\compressed\bnwo5h5pvm-h1s4sie4z3.gz
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\compressed\c4b1q8lztp-4d85u1mtcx.gz
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\compressed\8xzcajl7mt-0j3bgjxly4.gz
-C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\compressed\i4m4d58g8l-t3t4uzctyo.gz
-C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\compressed\1bvi0k4yx7-t3t4uzctyo.gz
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -80,3 +76,12 @@ C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\ref\Webs
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\bin\Debug\net9.0\Blazored.LocalStorage.dll
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\Webshop_Lab1.csproj.AssemblyReference.cache
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\Webshop_.B08FCF44.Up2Date
+C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\Webshop_Lab1.sourcelink.json
+C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\scopedcss\Components\Pages\Cart.razor.rz.scp.css
+C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\scopedcss\Components\Pages\OrderConfirmation.razor.rz.scp.css
+C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\scopedcss\Components\Pages\ProductDetails.razor.rz.scp.css
+C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\scopedcss\Components\Pages\ProductList.razor.rz.scp.css
+C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\compressed\g3enj6qihq-3r8b2a0bt1.gz
+C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
+C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\compressed\i4m4d58g8l-key8yo8j26.gz
+C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\compressed\1bvi0k4yx7-key8yo8j26.gz

@@ -1,6 +1,7 @@
 ﻿/* wwwroot/css/ProductDetails.css */
+
 .product-details-container {
-    background-color: #f4f4f4; /* Ljus bakgrundsfärg */
+    background-color: #f4f4f4;
     border-radius: 8px;
     padding: 20px;
     margin: 20px;
@@ -11,7 +12,7 @@
 
 .product-details-container h4 {
     font-size: 2rem;
-    color: #b30000; /* Mörkröd textfärg för rubriken */
+    color: #b30000;
     margin-bottom: 15px;
 }
 
@@ -31,32 +32,53 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-button {
-    background-color: #b30000; /* Mörkröd färg på knappen */
+/* Standard knapp */
+.add-to-cart-btn {
+    background-color: #b30000;
     color: white;
     font-size: 1.2rem;
     padding: 12px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     width: 100%;
     max-width: 250px;
     margin: 20px auto;
     display: block;
+    transition: background-color 0.3s ease;  /* Snabbare övergång */
 }
 
-button:hover {
-    background-color: #9c0000; /* Lite mörkare röd vid hover */
+.add-to-cart-btn:hover {
+    background-color: #9c0000;
 }
 
-button:focus {
+.add-to-cart-btn:focus {
     outline: none;
+}
+
+/* Färgändring när produkten är tillagd */
+.added-to-cart-btn {
+    background-color: #28a745;  /* Grön färg */
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+    width: 100%;
+    max-width: 250px;
+    margin: 20px auto;
+    display: block;
+    transition: background-color 0.3s ease;  /* Snabb övergång tillbaka till röd */
+}
+
+.added-to-cart-btn:hover {
+    background-color: #218838;  /* Lite mörkare grön vid hover */
 }
 
 a {
     font-size: 1rem;
-    color: #b30000; /* Mörkröd länk */
+    color: #b30000;
     text-decoration: none;
     display: inline-block;
     margin-top: 15px;
@@ -67,7 +89,6 @@ a:hover {
     color: #9c0000;
 }
 
-/* För att centrera hela sektionen och göra den responsiv */
 @media (max-width: 768px) {
     .product-details-container {
         padding: 15px;
@@ -82,7 +103,8 @@ a:hover {
         font-size: 1rem;
     }
 
-    button {
+    .add-to-cart-btn,
+    .added-to-cart-btn {
         width: 100%;
     }
 }

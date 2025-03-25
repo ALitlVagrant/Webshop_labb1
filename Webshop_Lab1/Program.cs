@@ -7,17 +7,14 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        // Lägg till HttpClient och konfigurera BaseAddress för att anropa API:et
         builder.Services.AddHttpClient<WebshopApi>(client =>
         {
             client.BaseAddress = new Uri("https://localhost:7013/"); // API:ets URL
         });
 
-        // Lägg till Blazor-komponenter och server-rendering
         builder.Services.AddRazorComponents()
             .AddInteractiveServerComponents();
 
-        // Lägg till tjänst för att använda produktservice (WebshopApi)
         builder.Services.AddScoped<WebshopApi>();
 
         builder.Services.AddBlazoredLocalStorage();
@@ -25,7 +22,6 @@ public class Program
 
         var app = builder.Build();
 
-        // Konfigurera HTTP-förfrågningar
         if (!app.Environment.IsDevelopment())
         {
             app.UseExceptionHandler("/Error");
@@ -36,7 +32,6 @@ public class Program
 
         app.UseAntiforgery();
 
-        // Lägg till statiska tillgångar
         app.MapStaticAssets();
 
         // Lägg till routing för Blazor-komponenter

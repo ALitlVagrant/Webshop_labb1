@@ -1,7 +1,6 @@
-/* wwwroot/css/ProductList.css */
 
 .product-list-container[b-badw4r8kv4] {
-    background-color: #f4f4f4; /* Ljus bakgrund för listan */
+    background-color: #f4f4f4; 
     padding: 20px;
     border-radius: 8px;
     max-width: 900px;
@@ -11,7 +10,7 @@
 
 .product-list-container h3[b-badw4r8kv4] {
     font-size: 2rem;
-    color: #b30000; /* Mörkröd textfärg för rubriken */
+    color: #b30000; 
     margin-bottom: 20px;
     text-align: center;
 }
@@ -78,10 +77,10 @@
     }
 
     li img[b-badw4r8kv4] {
-        width: 100px; /* Justerat för mindre bilder på små skärmar */
-        height: auto; /* Behåller proportionerna för bilderna */
-        object-fit: cover; /* Gör att bilden täcker området utan att förvrängas */
-        border-radius: 8px; /* Lägger till rundade hörn för bilderna */
-        margin-right: 10px; /* Ger lite avstånd mellan bild och produktnamn */
+        width: 100px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 10px;
     }
 }

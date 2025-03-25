@@ -1,4 +1,5 @@
 ﻿@page "/orderconfirmation"
+@using Webshop_Lab1.Models  
 @inject ILocalStorageService localStorage
 @rendermode InteractiveServer
 
@@ -28,11 +29,12 @@ else
 {
     <p>Laddar orderinformation...</p>
 }
+
 <link rel="stylesheet" href="css/OrderConfirmation.css">
 
 
 @code {
-    private Cart.Order order;
+    private Order order;  
     private List<Product> orderItems;
     private bool isLoading = true;
 
@@ -40,14 +42,13 @@ else
     {
         if (firstRender)
         {
-            order = await localStorage.GetItemAsync<Cart.Order>("orderDetails");
+            order = await localStorage.GetItemAsync<Order>("orderDetails");  
             orderItems = await localStorage.GetItemAsync<List<Product>>("orderItems");
 
-            // Töm varukorgen efter att ordern hämtats
             await localStorage.RemoveItemAsync("orderItems");
 
             isLoading = false;
-            StateHasChanged(); // Tvinga en omrendering
+            StateHasChanged(); 
         }
     }
 }

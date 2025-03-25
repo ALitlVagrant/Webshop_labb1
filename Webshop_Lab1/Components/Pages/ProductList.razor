@@ -1,7 +1,7 @@
 ﻿@page "/"
+@using Webshop_Lab1.Models
 
 @inject WebshopApi webshopApi
-
 
 @if (products != null && products.Count > 0)
 {
@@ -10,19 +10,10 @@
         <ul>
             @foreach (var product in products)
             {
-                <li>
-                    <a href="/productdetails/@product.Id">
-                        <img src="@product.ImageUrl" alt="@product.Name" />
-                        <br />
-                        @product.Name
-                        <br />
-                        <strong>@product.Price kr</strong> 
-                    </a>
-                </li>
+                <ProductItemComponent Product="product" />
             }
         </ul>
     </div>
-
 }
 else
 {
@@ -34,7 +25,6 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        Console.WriteLine("Fetching products...");
         products = await webshopApi.GetProductsAsync();
         Console.WriteLine("Finished fetching products.");
     }

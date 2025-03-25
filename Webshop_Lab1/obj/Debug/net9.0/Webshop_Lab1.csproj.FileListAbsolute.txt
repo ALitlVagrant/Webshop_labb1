@@ -83,5 +83,5 @@ C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\scopedcs
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\scopedcss\Components\Pages\ProductList.razor.rz.scp.css
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\compressed\g3enj6qihq-3r8b2a0bt1.gz
 C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
-C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\compressed\i4m4d58g8l-key8yo8j26.gz
-C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\compressed\1bvi0k4yx7-key8yo8j26.gz
+C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\compressed\i4m4d58g8l-kgf82xccu1.gz
+C:\Users\alitl\RiderProjects\Webshop_Lab1\Webshop_Lab1\obj\Debug\net9.0\compressed\1bvi0k4yx7-kgf82xccu1.gz

@@ -52,3 +52,17 @@
     background-color: #d00040; /* Ännu ljusare röd för hover */
     transform: scale(1.05);
 }
+
+/* Responsiv design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}

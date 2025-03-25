@@ -1,0 +1,12 @@
+﻿@using Webshop_Lab1
+@using Webshop_Lab1.Models
+
+<li>
+    @CartItem.Name - @CartItem.Price kr 
+    <button @onclick="() => RemoveFromCart.InvokeAsync(CartItem)">❌</button>
+</li>
+
+@code {
+    [Parameter] public Product CartItem { get; set; }
+    [Parameter] public EventCallback<Product> RemoveFromCart { get; set; }
+}

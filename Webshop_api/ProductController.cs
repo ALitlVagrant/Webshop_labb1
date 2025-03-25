@@ -104,9 +104,23 @@ new Product
     Description = "Hel åttaarmad bläckfisk, perfekt för att grilla eller att steka",
     ImageUrl = "https://media.istockphoto.com/id/1275277646/sv/foto/hela-fryst-bl%C3%A4ckfisk-p%C3%A5-is.jpg?b=1&s=612x612&w=0&k=20&c=qmA5Vjwn4Mi_r1MMDRmWfDO7W8w7upUe8nNL7IjPgDo=",
     Price = 699m
-}
-
-
+},
+new Product
+{
+    Id = 12,
+    Name = "Squid",
+    Description = "Hel  Squid, perfekt för att grilla, fritera eller att steka",
+    ImageUrl = "https://media.istockphoto.com/id/155156786/sv/foto/squid-seafood-isolated-on-white.jpg?b=1&s=612x612&w=0&k=20&c=VlxW8qe5kXGf_dpgnOJku3zt12uQsuM2OanhlUx1NRg=",
+    Price = 300m
+},
+new Product
+{
+    Id = 13,
+    Name = "Shrimp",
+    Description = "1kg Shrimp, perfect for your pasta dish!",
+    ImageUrl = "https://media.istockphoto.com/id/618957070/sv/foto/close-up-fresh-shrimps-display-on-ice-fishermen-market-store.jpg?b=1&s=612x612&w=0&k=20&c=key-nb59nOyQCQ6fa72fNhdCAUjaPii0plzn8bbjNRM=",
+    Price = 200m
+},
 };
 
 

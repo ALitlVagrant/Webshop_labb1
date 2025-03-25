@@ -1,14 +1,14 @@
 ﻿@page "/productdetails/{id:int}"
+@using Webshop_Lab1.Models
 @inject WebshopApi webshopApi
 @inject ILocalStorageService localStorage
 @rendermode InteractiveServer
-
 
 <head>
     <link rel="stylesheet" href="css/ProductDetails.css" />
 </head>
 
-<h3>📦 Produktdetaljer</h3>
+<h3> Produktdetaljer</h3>
 
 @if (product != null)
 {
@@ -19,13 +19,14 @@
         <img src="@product.ImageUrl" alt="@product.Name" width="200" />
 
         <br /><br />
-        <button @onclick="AddToCart">🛒 Lägg till i varukorg</button>
+        <button @onclick="AddToCart" style="background-color: @(isAddedToCart ? "#28a745" : "#b30000");">
+             Lägg till i varukorg
+        </button>
+        
         @foreach (var message in confirmationMessages)
         {
             <p class="text-success">@message</p>
         }
-        
-        
     </div>
 
     <br />
@@ -42,44 +43,34 @@ else
     private Product product;
 
     private List<string> confirmationMessages = new List<string>();
+    private bool isAddedToCart = false;  // Styr färgändringen
 
     protected override async Task OnInitializedAsync()
     {
-        Console.WriteLine($"Hämtar produkt med ID {id}...");
         product = await webshopApi.GetProductByIdAsync(id);
     }
+
 
     private async Task AddToCart()
     {
         if (product == null)
-        {
-            Console.WriteLine("ERROR: Ingen produkt att lägga till i varukorgen!");
             return;
-        }
 
-        Console.WriteLine($"Försöker lägga till {product.Name} i varukorgen...");
-    
-        var cartItems = await localStorage.GetItemAsync<List<Product>>("cart");
-
-        if (cartItems == null)
-        {
-            Console.WriteLine("Ingen befintlig varukorg hittades. Skapar ny lista...");
-            cartItems = new List<Product>();
-        }
+        var cartItems = await localStorage.GetItemAsync<List<Product>>("cart") ?? new List<Product>();
 
         cartItems.Add(product);
         await localStorage.SetItemAsync("cart", cartItems);
-    
-        Console.WriteLine("Produkt tillagd i varukorgen!");
 
-        // Lägg till meddelande
-        string confirmationMessage = $"{product.Name} har lagts till i varukorgen!";
-        confirmationMessages.Add(confirmationMessage);
+        // Ändra knappfärgen till grön
+        isAddedToCart = true;
+        StateHasChanged(); // 🛑 Se till att UI:t uppdateras direkt
 
-        // Vänta 2 sekunder innan det specifika meddelandet försvinner
-        await Task.Delay(2000);
-        confirmationMessages.Remove(confirmationMessage);
+        // Vänta 1 sekund
+        await Task.Delay(1000);
+
+        // Återställ knappen till röd
+        isAddedToCart = false;
+        StateHasChanged(); // 🛑 Uppdatera UI:t igen
     }
-
-
 }
+

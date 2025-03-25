@@ -1,0 +1,62 @@
+﻿/* Orderbekräftelse container */
+.order-confirmation-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Titel */
+.order-confirmation-container h3 {
+    font-size: 2rem;
+    color: #4CAF50; /* Grön färg för en lyckad order */
+    margin-bottom: 15px;
+}
+
+/* Kunduppgifter */
+.order-confirmation-container p {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 8px 0;
+}
+
+/* Produkter lista */
+.order-confirmation-container ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.order-confirmation-container li {
+    background: white;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Laddningsmeddelande */
+.loading-message {
+    font-size: 1.2rem;
+    color: #b30000;
+    font-weight: bold;
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+    .order-confirmation-container {
+        padding: 15px;
+        margin: 20px;
+    }
+
+    .order-confirmation-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .order-confirmation-container p {
+        font-size: 1rem;
+    }
+}

@@ -1,4 +1,6 @@
 ﻿
+using Webshop_Lab1.Models;
+
 public class WebshopApi
 {
     private readonly HttpClient _httpClient;
@@ -33,7 +35,7 @@ public class WebshopApi
         catch (Exception ex)
         {
             Console.WriteLine($"Error fetching product with ID {id}: {ex.Message}");
-            return null; // Returnera null vid fel
+            return null; 
         }
     }
 
@@ -41,11 +43,3 @@ public class WebshopApi
 }
 
 
-public class Product
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public string ImageUrl { get; set; }
-    public decimal Price { get; set; }
-}
